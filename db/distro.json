@@ -1,10 +1,10 @@
 {
 	"distro": [
 		{
-			"Ubuntu"
+			"Ubuntu": "True",
 		},
 		{
-			"Alpine"
+			"Alpine": "True"
 		}
 	] 
 }
