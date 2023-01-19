@@ -1,5 +1,3 @@
-
-$bin=$(which start-alpine)
 work_dir="~/.cache/pdist"
 sitfs="~/.local/share/pdist/alpine"
 LATEST="v3.17.0"
@@ -25,10 +23,11 @@ case `dpkg --print-architecture` in
 		cd $work_dir; curl -LO https://dl-cdn.alpinelinux.org/alpine/latest-stable/releases/$arch/alpine-minirootfs-3.17.0-$arch.tar.gz
 		echo "Extract FS"
 		rm -rf $sitfs; mkdir -p $sitfs; cd $sitfs
-		tar -xvf ${cur}/${tarball} --exclude='dev'
+		tar -xvf $work_dir/alpine* --exclude='dev'
 		echo "Get Launch Script"
 		cd /data/data/com.termux/files/usr/bin
 		cp ~/.local/share/pdist/db/Alpine/start-alpine -r /data/data/com.termux/files/usr
+		bin="~/.local/share/pdist/db/Alpine/start-alpine"
 		echo "Setup Alpine For First Time"
 		cd $sitfs/etc
 		echo "nameserver 1.1.1.1" > resolv.conf
