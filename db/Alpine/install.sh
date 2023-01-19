@@ -25,7 +25,7 @@ case `dpkg --print-architecture` in
 		cd $work_dir; curl -LO https://dl-cdn.alpinelinux.org/alpine/latest-stable/releases/$arch/alpine-minirootfs-3.17.0-$arch.tar.gz
 		echo "Extract FS"
 		rm -rf $sitfs; mkdir -p $sitfs; cd $sitfs
-		proot --link2symlink tar -xf ${cur}/${tarball} --exclude='dev' 2> /dev/null||:
+		tar -xvf ${cur}/${tarball} --exclude='dev' 2> /dev/null||:
 		echo "Get Launch Script"
 		cd /data/data/com.termux/files/usr/bin
 		cp ~/.local/share/pdist/db/Alpine/start-alpine -r /data/data/com.termux/files/usr
