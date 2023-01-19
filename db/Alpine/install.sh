@@ -1,5 +1,5 @@
 
-$bin=$(which alpine)
+$bin=$(which start-alpine)
 work_dir="~/.cache/pdist"
 sitfs="~/.local/share/pdist/alpine"
 LATEST="v3.17.0"
@@ -28,7 +28,7 @@ case `dpkg --print-architecture` in
 		proot --link2symlink tar -xf ${cur}/${tarball} --exclude='dev' 2> /dev/null||:
 		echo "Get Launch Script"
 		cd /data/data/com.termux/files/usr/bin
-		cp ~/.local/share/pdist/db/Alpine/start-alpine
+		cp ~/.local/share/pdist/db/Alpine/start-alpine -r /data/data/com.termux/files/usr
 		echo "Setup Alpine For First Time"
 		cd $sitfs/etc
 		echo "nameserver 1.1.1.1" > resolv.conf
