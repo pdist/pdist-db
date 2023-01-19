@@ -1,0 +1,22 @@
+{
+	"distro": [
+		{
+			"distro_name": "Alpine",
+			"aarch64": "True",
+			"armv7": "True",
+			"armhf": "True",
+			"x86_64": "True",
+			"i386": "True",
+			"mainweb": "alpinelinux.org"
+		},
+		{
+			"distro_name": "Ubuntu",
+			"aarch64": "True",
+			"armv7": "True",
+			"armhf": "True",
+			"x86_64": "True",
+			"i386": "True",
+			"mainweb": "https://ubuntu.com/"
+		}
+	] 
+}
