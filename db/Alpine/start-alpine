@@ -1,0 +1,4 @@
+#!/bin/bash
+sitfs="~/.local/share/pdist/alpine"
+unset LD_PRELOAD
+proot --link2symlink -0 -r sitfs -b /dev -b /proc -b /sdcard -w /root /bin/env -i HOME=/home/user PATH=/bin:/usr/bin:/sbin:/usr/sbin TERM=\$TERM LANG=C.UTF-8 /bin/bash
